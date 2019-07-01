@@ -7,7 +7,6 @@ const FilterBar = () => {
         <div>
         {
           recipeFilters.map((recipeFilter, i) => {
-            console.log("FilterBar - recipeFilter",recipeFilter);
             return (
                 
                 <CheckBoxBlock

@@ -4,6 +4,8 @@ import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import './App.css';
 import FilterBar from '../components/FilterBar';
+import RecipeList from '../components/RecipeList';
+import {recipes} from '../recipes';
 
 class App extends Component {
   constructor() {
@@ -33,17 +35,18 @@ class App extends Component {
       <h1>Loading</h1> :
       (
         <div className='tc'>
-          <h1 className='f1'>RoboFriends</h1>
+          <h1 className='f1'>CookingBook</h1>
           
-
           <SearchBox searchChange={this.onSearchChange}/>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm">
+
+          <div className="container">
+            <div className="row">
+              <div className="col-2">
               <FilterBar/>
               </div>
-              <div class="col-sm">
+              <div className="col-10">
               <Scroll>
+                <RecipeList recipes={recipes}/>
                 <CardList robots={filteredRobots} />
               </Scroll>
               </div>

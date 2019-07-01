@@ -3,7 +3,6 @@ import './CheckBoxBlock.css';
 
 const CheckBox = ({name , id}) => {
 
-  console.log("CHeckBox",name,id);
   return (
     <div className="list-group">
       

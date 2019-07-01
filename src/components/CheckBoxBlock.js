@@ -7,7 +7,6 @@ const CheckBoxBlock = ({id, name, options}) => {
       <h1>{name}</h1>
       {
           options.map((option, i) => {
-            console.log("map options",option,i,name);
             return (<CheckBox key= {i} name={option} id={name+i}/>);
           })
       
